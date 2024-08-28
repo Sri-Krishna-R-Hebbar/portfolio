@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.card {
+  width: 300px;  /* Decreased width */
+  height: 200px; /* Decreased height */
+  background: rgba(255, 255, 255, 0.05); /* More transparent background */
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px; /* Reduced padding */
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.6rem; /* Adjusted font size */
+  font-weight: 600;
+  color: #000000;
+}
+
+.card p {
+  margin: 10px 0 0;
+  font-size: 0.9rem; /* Adjusted font size */
+  font-weight: 400;
+  color: #000000;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffdd57, #ff7b7b, #1dd1a1, #48dbfb);
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(20px);
+  border-radius: 15px;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,23 @@
+.page1 {
+  position: relative; /* Relative positioning for the containing block */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.image-container {
+  position: fixed; /* Fixed position to stay in place as you scroll */
+  top: 0;
+  right: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Prevent interaction */
+}
+
+.image-container img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin: 10px; /* Space between images */
+}
+  
